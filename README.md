@@ -8,6 +8,6 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
  ".venv\Scripts\activate"
 5. menginstal django  "pip install django"
 6. setelah semua terinstall jalankan server pengembang, "python manage.py runserver"
-7. tambahkan perubahan ke staging Area, "git add ."
+7. tambahkan perubahan ke staging Area, "git add static templates"
 8. mengCommit perubahan "git commit -m "Pesan commit yang deskriptif" "
 9. push ke repository remote, "git push" 
