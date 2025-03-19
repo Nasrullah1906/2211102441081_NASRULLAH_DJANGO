@@ -8,3 +8,11 @@ def home(request):
         'umur' : 20,
     }
     return render(request, template_name, context)
+
+def about(request):
+    template_name = "about.html"
+    context = {
+        'title' : 'Selamat datang di halaman about',
+        'umur' : 20,
+    }
+    return render(request, template_name, context)
