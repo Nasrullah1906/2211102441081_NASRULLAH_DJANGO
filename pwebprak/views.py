@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    template_name = 'home.html'
+    template_name = 'halaman/base.html'
     context = {
         'title': 'Nasrullah',
         'umur' : 20,
