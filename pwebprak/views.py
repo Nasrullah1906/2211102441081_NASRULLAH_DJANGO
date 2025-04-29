@@ -1,18 +1,28 @@
 from django.shortcuts import render
 
-
 def home(request):
-    template_name = 'halaman/base.html'
+    template_name = 'halaman/index.html'
     context = {
-        'title': 'Nasrullah',
-        'umur' : 20,
+        'title': '-HOMEPAGE-',
+        'description': 'web portfolio saya',
+        'body': 'Halaman home'
     }
     return render(request, template_name, context)
 
 def about(request):
-    template_name = "about.html"
+    template_name = 'about.html'
     context = {
-        'title' : 'Selamat datang di halaman about',
-        'umur' : 20,
+        'title': '-ABOUT PAGE-',
+        'description': 'web portfolio saya',
+        'body': 'Halaman about'
+    }
+    return render(request, template_name, context)
+
+def contact(request):
+    template_name = 'contact.html'
+    context = {
+        'title': '- CONTACT -',
+        'description': 'Contact',
+        'body': 'Contact Page'
     }
     return render(request, template_name, context)
