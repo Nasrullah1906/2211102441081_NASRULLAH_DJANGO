@@ -1,8 +1,8 @@
 from django.contrib import admin
-from berita.models import kategori, Artikel
+from berita.models import Kategori, Artikel
 # Register your models here.
 
-admin.site.register(kategori)
+admin.site.register(Kategori)
 
 class ArtikelAdmin(admin.ModelAdmin):
     list_display = ['judul', 'kategori', 'author']
