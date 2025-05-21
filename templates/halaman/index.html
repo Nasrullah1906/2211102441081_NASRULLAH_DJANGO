@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'halaman/assets/img/apple-icon.png' %}">
   <link rel="icon" type="image/png" href="{% static 'halaman/assets/img/favicon.png' %}">
-  <title>Material Kit 2 PRO by Creative Tim</title>
+  <title>pwebprak</title>
 
   <!-- Fonts and icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -47,7 +47,7 @@
           <div class="container">
             <div class="row justify-content-center text-center">
               <div class="col-lg-12">
-                <h1 class="text-white fadeIn2 fadeInBottom">Selamat Datang di Webku</h1>
+                <h1 class="text-white fadeIn2 fadeInBottom">Selamat Datang di Web saya </h1>
               </div>
             </div>
           </div>
@@ -63,8 +63,10 @@
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary"onclick="location.href='/'">All</button>
             {% for kategori in data_kategori %}
+            <li {% if menu_aktif == kategori.nama %} class="active" {% endif %}></li>
             <button type="button" class="btn btn-primary" onclick="location.href='?kategori={{ kategori.nama }}'">{{ kategori }}</button>
             {% endfor %}
+          </li>
           </div>
         </div>
       </div>
@@ -108,8 +110,12 @@
             </div>
           </div>
         </div>
-      {% endfor %}
+      {%empty%}
+      <div class="col" style="margin: 30px;">
+        <p class="text-center">Tidak Ada Berita ...</p>
+      </div>
     </div>
   </section>
+  {% endfor %}
 </header>
 {% endblock %}
