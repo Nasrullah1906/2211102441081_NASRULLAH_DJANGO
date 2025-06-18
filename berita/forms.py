@@ -20,5 +20,4 @@ class ArtikelForm(forms.ModelForm):
                 attrs={
                     'class': 'form-control',
                 }),
-
         }
